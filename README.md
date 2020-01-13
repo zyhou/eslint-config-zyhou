@@ -1,5 +1,9 @@
 # eslint-config-zyhou
 
+[![](https://github.com/zyhou/eslint-config-zyhou/workflows/npmpublish/badge.svg?branch=master)](https://github.com/zyhou/cra-template-react-admin/actions)
+[![npm version](https://badge.fury.io/js/eslint-config-zyhou.svg)](https://www.npmjs.com/package/eslint-config-zyhou)
+
+
 > A highly opinionated, [sharable config](http://eslint.org/docs/developer-guide/shareable-configs.html) of [ESLint](http://eslint.org) rules to produce beautiful, readable JavaScript.
 
 As developers, we spend more time reading code than writing it. These rules aim to make reading JavaScript a priority.
