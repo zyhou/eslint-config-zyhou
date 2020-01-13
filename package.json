@@ -1,0 +1,67 @@
+{
+    "name": "eslint-config-zyhou",
+    "version": "0.0.1",
+    "description": "Personal eslint config",
+    "main": "base.js",
+    "files": [
+        "base.js",
+        "cypress.js",
+        "jest.js",
+        "jsdoc.js",
+        "react.js"
+    ],
+    "repository": "git@github.com:zyhou/eslint-config-zyhou.git",
+    "bugs": {
+        "url": "https://github.com/zyhou/eslint-config-zyhou/issues"
+    },
+    "homepage": "https://github.com/zyhou/eslint-config-zyhou",
+    "keywords": [
+        "eslint",
+        "eslint-config"
+    ],
+    "author": "Maxime Richard",
+    "license": "MIT",
+    "scripts": {
+        "lint": "eslint .",
+        "format": "prettier --write --check \"**/*.+(js|json|md)\""
+    },
+    "peerDependencies": {
+        "eslint": ">= 6.8.0",
+        "prettier": ">=1.19.1"
+    },
+    "devDependencies": {
+        "eslint": "6.8.0",
+        "husky": "4.0.7",
+        "lint-staged": "9.5.0",
+        "prettier": "1.19.1"
+    },
+    "dependencies": {
+        "babel-eslint": "^10.0.3",
+        "eslint-config-prettier": "^6.9.0",
+        "eslint-plugin-babel": "^5.3.0",
+        "eslint-plugin-cypress": "^2.8.1",
+        "eslint-plugin-import": "^2.19.1",
+        "eslint-plugin-jest": "^23.4.0",
+        "eslint-plugin-jest-dom": "^2.0.0",
+        "eslint-plugin-jsdoc": "^20.0.5",
+        "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-prettier": "^3.1.2",
+        "eslint-plugin-react": "^7.17.0",
+        "eslint-plugin-react-hooks": "^2.3.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.js": [
+            "eslint",
+            "git add"
+        ],
+        "*.{js,json,md}": [
+            "prettier --write",
+            "git add"
+        ]
+    }
+}
