@@ -43,14 +43,14 @@ Create an ESLint config in your `.eslintrc.json` file
 }
 ```
 
-Create an [Prettier config](https://prettier.io/docs/en/options.html) in your `.prettierrc` file.
+Create an [Prettier config](https://prettier.io/docs/en/options.html) in your `.prettierrc.json` file.
 
 ```json
 {
     "singleQuote": true,
     "tabWidth": 4,
     "trailingComma": "all",
-    "printWidth": 120
+    "printWidth": 100
 }
 ```
 
@@ -67,8 +67,7 @@ This config also exposes a few other configs. You can combine with the base conf
 -   `cypress`: [cypress](https://www.cypress.io/) testing framework
 -   `jsdoc`: for beautiful comment and generate doc
 -   `jest`: [jest](https://jestjs.io/) testing framework
--   `jsx-a11y`: for rules regarding accessibility with JSX
--   `react`: [React](https://reactjs.org/) JS library
+-   `react`: [React](https://reactjs.org/) JS library and a11y rules
 
 ## Other recommendation
 
