@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/zyhou/eslint-config-zyhou/compare/v0.0.4...v0.0.7) (2020-09-25)
+
+### Features
+
+-   eslint to ^7.9.0 and update dep ([85eb92e](https://github.com/zyhou/eslint-config-zyhou/commit/85eb92ec6da43670df65ca3f96da56a8f8c7aeb0))
+
+### Bug Fixes
+
+-   hooks rules ([8699e6a](https://github.com/zyhou/eslint-config-zyhou/commit/8699e6aeae9c8c8b985252dbd6da64ac7ff6f45a))
+
 ### 0.0.6 (2020-05-06)
 
 ### Features
