@@ -5,10 +5,9 @@
     "main": "base.js",
     "files": [
         "base.js",
-        "cypress.js",
-        "jest.js",
-        "jsdoc.js",
-        "react.js"
+        "react.js",
+        "typescript.js",
+        "presets"
     ],
     "repository": "git@github.com:zyhou/eslint-config-zyhou.git",
     "bugs": {
@@ -27,42 +26,41 @@
         "format": "prettier --write --check \"**/*.+(js|json|md)\""
     },
     "peerDependencies": {
-        "eslint": ">=7.9.0",
-        "prettier": ">=2.0.2"
+        "eslint": ">=7.26.0",
+        "prettier": ">=2.3.0"
     },
     "devDependencies": {
-        "@commitlint/cli": "11.0.0",
-        "@commitlint/config-conventional": "11.0.0",
-        "eslint": "7.9.0",
-        "husky": "4.3.0",
-        "lint-staged": "10.4.0",
-        "prettier": "2.1.2",
-        "standard-version": "9.0.0"
+        "@commitlint/cli": "12.1.1",
+        "@commitlint/config-conventional": "12.1.1",
+        "eslint": "7.26.0",
+        "husky": "6.0.0",
+        "lint-staged": "11.0.0",
+        "prettier": "2.3.0",
+        "standard-version": "9.3.0",
+        "typescript": "4.2.4"
     },
     "dependencies": {
-        "babel-eslint": "^10.1.0",
+        "@babel/eslint-parser": "^7.13.14",
+        "@babel/eslint-plugin": "^7.13.16",
+        "@typescript-eslint/eslint-plugin": "^4.23.0",
+        "@typescript-eslint/parser": "^4.23.0",
         "eslint-config-prettier": "^6.10.1",
-        "eslint-plugin-babel": "^5.3.0",
-        "eslint-plugin-cypress": "^2.10.3",
-        "eslint-plugin-import": "^2.20.2",
-        "eslint-plugin-jest": "^24.0.2",
-        "eslint-plugin-jest-dom": "^3.2.3",
-        "eslint-plugin-jsdoc": "^30.5.1",
-        "eslint-plugin-jsx-a11y": "^6.2.3",
-        "eslint-plugin-prettier": "^3.1.2",
-        "eslint-plugin-react": "^7.19.0",
-        "eslint-plugin-react-hooks": "^4.0.0"
+        "eslint-plugin-cypress": "^2.11.3",
+        "eslint-plugin-eslint-comments": "^3.2.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-jest": "^24.3.6",
+        "eslint-plugin-jest-dom": "^3.9.0",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-react": "^7.23.2",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "eslint-plugin-testing-library": "^4.2.1",
+        "eslint-plugin-unicorn": "^32.0.1"
     },
     "commitlint": {
         "extends": [
             "@commitlint/config-conventional"
         ]
-    },
-    "husky": {
-        "hooks": {
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS --verbose",
-            "pre-commit": "lint-staged"
-        }
     },
     "lint-staged": {
         "*.js": "eslint",

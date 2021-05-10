@@ -1,22 +1,19 @@
+const tests = require('./tests.js');
+
 module.exports = {
     env: {
         node: true,
         browser: true,
-        es2020: true,
+        es2021: true,
     },
-    parser: 'babel-eslint',
+    parser: '@babel/eslint-parser',
     parserOptions: {
-        ecmaVersion: 2020,
+        ecmaVersion: 2021,
         sourceType: 'module',
+        requireConfigFile: false,
     },
-    plugins: ['prettier', 'babel'],
-    extends: [
-        'eslint:recommended',
-        'prettier',
-        'plugin:prettier/recommended',
-        'plugin:import/errors',
-        'plugin:import/warnings',
-    ],
+    plugins: ['@babel'],
+    extends: ['eslint:recommended', 'plugin:unicorn/recommended', 'plugin:import/errors', 'plugin:import/warnings'],
     rules: {
         'no-console': [
             'error',
@@ -39,7 +36,17 @@ module.exports = {
                 skipTemplates: true,
             },
         ],
-        'babel/no-unused-expressions': 'error',
-        'prettier/prettier': 'error',
+        'unicorn/prefer-module': 'off',
+        '@babel/new-cap': 'error',
+        '@babel/no-invalid-this': 'error',
+        '@babel/no-unused-expressions': 'error',
+        '@babel/object-curly-spacing': 'error',
+        '@babel/semi': 'error',
     },
+    overrides: [
+        {
+            files: ['**/*.{test,spec,stories}.*', '**/test{s,}/**'],
+            ...tests,
+        },
+    ],
 };

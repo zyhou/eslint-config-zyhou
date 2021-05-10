@@ -11,18 +11,20 @@ That means some rules will feel oppressive or "over the top" for many developers
 
 This config also comes with the following plugins, and corresponding rules, baked in.
 
--   [babel-eslint](https://www.npmjs.com/package/babel-eslint)
+-   [@babel/eslint-plugin](https://www.npmjs.com/package/@babel/eslint-plugin)
+-   [typescript-eslint](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin)
 -   [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier)
--   [eslint-plugin-babel](https://www.npmjs.com/package/eslint-plugin-babel)
 -   [eslint-plugin-cypress](https://www.npmjs.com/package/eslint-plugin-cypress)
+-   [eslint-plugin-eslint-comments](https://www.npmjs.com/package/eslint-plugin-eslint-comments)
 -   [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)
 -   [eslint-plugin-jest](https://www.npmjs.com/package/eslint-plugin-jest)
 -   [eslint-plugin-jest-dom](https://github.com/testing-library/eslint-plugin-jest-dom)
--   [eslint-plugin-jsdoc](https://www.npmjs.com/package/eslint-plugin-jsdoc)
 -   [eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
 -   [eslint-plugin-prettier](https://www.npmjs.com/package/eslint-plugin-prettier)
 -   [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react)
 -   [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
+-   [eslint-plugin-testing-library](https://www.npmjs.com/package/eslint-plugin-testing-library)
+-   [eslint-plugin-unicorn](https://www.npmjs.com/search?q=eslint-plugin-unicorn)
 
 ## Install
 
@@ -60,14 +62,17 @@ This config also exposes a few other configs. You can combine with the base conf
 
 ```json
 {
-    "extends": ["zyhou", "zyhou/<config-name>"]
+    "extends": ["zyhou", "zyhou/<config-name>", "zyhou/presets/<config-name>"]
 }
 ```
 
--   `cypress`: [cypress](https://www.cypress.io/) testing framework
--   `jsdoc`: for beautiful comment and generate doc
--   `jest`: [jest](https://jestjs.io/) testing framework
--   `react`: [React](https://reactjs.org/) JS library and a11y rules
+-   `zyhou/tests`: [jest](https://jestjs.io/) testing framework + [cypress](https://www.cypress.io/) testing framework
+-   `zyhou/react`: [React](https://reactjs.org/) JS library and a11y rules
+-   `zyhou/typescript`:[Typescript](https://www.typescriptlang.org/) language
+-   `zyhou/presets/node`: [prettier](https://prettier.io/) + base config
+-   `zyhou/presets/react`: [prettier](https://prettier.io/) + base + react config
+-   `zyhou/presets/typescript`: [prettier](https://prettier.io/) + typescript config
+-   `zyhou/presets/typescript-react`: [prettier](https://prettier.io/) + typescript + react config
 
 ## Other recommendation
 
@@ -84,7 +89,7 @@ Create these commands in your `package.json`
 }
 ```
 
--   `yarn format`: run prettier on code base, you can change path and file extension
+-   `yarn format`: run prettier on code base, you can change path and file extension, `ts|tsx|js|jsx`
 -   `yarn lint --fix`: run eslint and automatically fix problems
 -   `yarn lint`: run eslint on code base, fix or update rules
 
@@ -100,11 +105,6 @@ Update your `package.json` file.
 
 ```json
 {
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
     "lint-staged": {
         "*.js": "eslint",
         "*.{js,json,md}": "prettier --write"
@@ -112,22 +112,35 @@ Update your `package.json` file.
 }
 ```
 
-You can add this config in multiples files.
+Change husky hook
 
-```json
-// .huskyrc
-{
-    "hooks": {
-        "pre-commit": "lint-staged"
-    }
-}
+```sh
+#!/bin/sh
+# .husky/commit-msg
+. "$(dirname "$0")/_/husky.sh"
+
+yarn commitlint --edit "$1"
 ```
 
+```sh
+#!/bin/sh
+# .husky/pre-commit
+. "\$(dirname "\$0")/\_/husky.sh"
+
+yarn lint-staged
+```
+
+## VSCode
+
+This is our recommended VSCode configuration using the Prettier extension. Adjust it to the needs of your particular project:
+
 ```json
-// .lintstagedrc
 {
-    "*.js": "eslint",
-    "*.{js,json,md}": "prettier --write"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
 }
 ```
 
