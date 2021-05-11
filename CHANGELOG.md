@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/zyhou/eslint-config-zyhou/compare/v0.0.8...v0.0.9) (2021-05-11)
+
+
+### Features
+
+* fix test publish ([c6bc5ea](https://github.com/zyhou/eslint-config-zyhou/commit/c6bc5eafb8bd44ba4b73e9032a6bbfe2b2dcf46a))
+
 ### [0.0.8](https://github.com/zyhou/eslint-config-zyhou/compare/v0.0.7...v0.0.8) (2021-05-11)
 
 ### [0.0.7](https://github.com/zyhou/eslint-config-zyhou/compare/v0.0.4...v0.0.7) (2020-09-25)
