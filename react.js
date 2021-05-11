@@ -1,5 +1,10 @@
 module.exports = {
-    extends: ['plugin:react/recommended', 'plugin:jsx-a11y/recommended', 'plugin:testing-library/react'],
+    extends: [
+        'plugin:react/recommended',
+        'plugin:react/jsx-runtime',
+        'plugin:jsx-a11y/recommended',
+        'plugin:testing-library/react',
+    ],
     settings: {
         react: {
             version: 'detect',
