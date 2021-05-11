@@ -6,12 +6,13 @@ module.exports = {
         browser: true,
         es2020: true,
     },
-    parser: '@babel/eslint-parser',
+    parser: 'babel-eslint',
     parserOptions: {
         ecmaVersion: 2020,
         sourceType: 'module',
         requireConfigFile: false,
     },
+    plugins: ['babel'],
     extends: ['eslint:recommended', 'plugin:unicorn/recommended', 'plugin:import/errors', 'plugin:import/warnings'],
     rules: {
         'no-console': [
@@ -36,6 +37,7 @@ module.exports = {
             },
         ],
         'unicorn/prefer-module': 'off',
+        'babel/no-unused-expressions': 'error',
     },
     overrides: [
         {
