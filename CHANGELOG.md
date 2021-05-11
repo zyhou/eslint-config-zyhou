@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.13](https://github.com/zyhou/eslint-config-zyhou/compare/v0.0.12...v0.0.13) (2021-05-11)
+
+
+### Features
+
+* add react/jsx-runtime config ([2b10ab1](https://github.com/zyhou/eslint-config-zyhou/commit/2b10ab103f5df109401c12acb6060c0a2169ab06))
+
 ### [0.0.12](https://github.com/zyhou/eslint-config-zyhou/compare/v0.0.11...v0.0.12) (2021-05-11)
 
 
