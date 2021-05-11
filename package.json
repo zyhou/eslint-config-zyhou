@@ -7,6 +7,7 @@
         "base.js",
         "react.js",
         "typescript.js",
+        "tests.js",
         "presets"
     ],
     "repository": "git@github.com:zyhou/eslint-config-zyhou.git",
