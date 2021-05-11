@@ -4,15 +4,14 @@ module.exports = {
     env: {
         node: true,
         browser: true,
-        es2021: true,
+        es2020: true,
     },
     parser: '@babel/eslint-parser',
     parserOptions: {
-        ecmaVersion: 2021,
+        ecmaVersion: 2020,
         sourceType: 'module',
         requireConfigFile: false,
     },
-    plugins: ['@babel'],
     extends: ['eslint:recommended', 'plugin:unicorn/recommended', 'plugin:import/errors', 'plugin:import/warnings'],
     rules: {
         'no-console': [
@@ -37,11 +36,6 @@ module.exports = {
             },
         ],
         'unicorn/prefer-module': 'off',
-        '@babel/new-cap': 'error',
-        '@babel/no-invalid-this': 'error',
-        '@babel/no-unused-expressions': 'error',
-        '@babel/object-curly-spacing': 'error',
-        '@babel/semi': 'error',
     },
     overrides: [
         {
