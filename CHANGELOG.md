@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/zyhou/eslint-config-zyhou/compare/v0.0.11...v0.0.12) (2021-05-11)
+
+
+### Bug Fixes
+
+* update unicorn/filename-case rule ([2b23f1f](https://github.com/zyhou/eslint-config-zyhou/commit/2b23f1f415e52abaf583fb734b7e99f66ccb5a54))
+
 ### [0.0.11](https://github.com/zyhou/eslint-config-zyhou/compare/v0.0.10...v0.0.11) (2021-05-11)
 
 
