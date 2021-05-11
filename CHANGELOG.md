@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.14](https://github.com/zyhou/eslint-config-zyhou/compare/v0.0.13...v0.0.14) (2021-05-11)
+
+
+### Bug Fixes
+
+* update react rules ([f2dbc6f](https://github.com/zyhou/eslint-config-zyhou/commit/f2dbc6ff1de4cfdadc9eab91961523717f78ab16))
+
 ### [0.0.13](https://github.com/zyhou/eslint-config-zyhou/compare/v0.0.12...v0.0.13) (2021-05-11)
 
 
