@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/zyhou/eslint-config-zyhou/compare/v0.0.9...v0.0.10) (2021-05-11)
+
+
+### Bug Fixes
+
+* remove babel config ([688617d](https://github.com/zyhou/eslint-config-zyhou/commit/688617d8d3146b05ba53fc24fa8883983a28039e))
+
 ### [0.0.9](https://github.com/zyhou/eslint-config-zyhou/compare/v0.0.8...v0.0.9) (2021-05-11)
 
 
