@@ -5,6 +5,17 @@ module.exports = {
             version: 'detect',
         },
     },
+    rules: {
+        'unicorn/filename-case': [
+            'error',
+            {
+                cases: {
+                    kebabCase: true,
+                    pascalCase: true,
+                },
+            },
+        ],
+    },
     overrides: [
         {
             files: ['*.jsx', '*.tsx'],
