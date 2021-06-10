@@ -1,6 +1,6 @@
 {
     "name": "eslint-config-zyhou",
-    "version": "0.0.14",
+    "version": "0.0.15",
     "description": "Personal eslint config",
     "main": "base.js",
     "files": [
