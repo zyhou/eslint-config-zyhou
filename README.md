@@ -24,7 +24,6 @@ This config also comes with the following plugins, and corresponding rules, bake
 -   [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react)
 -   [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 -   [eslint-plugin-testing-library](https://www.npmjs.com/package/eslint-plugin-testing-library)
--   [eslint-plugin-unicorn](https://www.npmjs.com/search?q=eslint-plugin-unicorn)
 
 ## Install
 

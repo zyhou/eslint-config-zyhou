@@ -13,6 +13,15 @@ module.exports = {
                 },
             },
             extends: ['plugin:import/typescript', 'plugin:@typescript-eslint/recommended'],
+            rules: {
+                '@typescript-eslint/no-unused-vars': [
+                    'error',
+                    {
+                        ignoreRestSiblings: true,
+                        argsIgnorePattern: '^_',
+                    },
+                ],
+            },
         },
         {
             files: ['**/*.{test,spec,stories}.*', '**/test{s,}/**'],

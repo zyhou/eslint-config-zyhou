@@ -13,7 +13,7 @@ module.exports = {
         requireConfigFile: false,
     },
     plugins: ['babel'],
-    extends: ['eslint:recommended', 'plugin:unicorn/recommended', 'plugin:import/errors', 'plugin:import/warnings'],
+    extends: ['eslint:recommended', 'plugin:import/errors', 'plugin:import/warnings'],
     rules: {
         'no-console': [
             'error',
@@ -25,6 +25,7 @@ module.exports = {
             'error',
             {
                 ignoreRestSiblings: true,
+                argsIgnorePattern: '^_',
             },
         ],
         'no-irregular-whitespace': [
@@ -36,7 +37,6 @@ module.exports = {
                 skipTemplates: true,
             },
         ],
-        'unicorn/prefer-module': 'off',
         'babel/no-unused-expressions': 'error',
     },
     overrides: [
